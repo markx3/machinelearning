@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Feb 18 15:42:59 2017
+Created on Sun Feb 19 03:47:57 2017
 
 @author: marcos
 """
 
-# Polynomial Linear Regression
+# Regression Template
 
-# Pre-processamento de dados
-
-# Importando as bibliotecas
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -48,7 +45,7 @@ plt.ylabel('Salary')
 plt.show()
 
 # Visualizing the Polynomial Regression results
-X_grid = np.arange(min(X), max(X) + 1, 0.1)
+X_grid = np.arange(min(X), max(X) + 1, 0.0001)
 X_grid = X_grid.reshape(len(X_grid), 1)
 plt.scatter(X, Y, color = 'red')
 plt.plot(X_grid, lin_reg_2.predict(poly_reg.fit_transform(X_grid)), color = 'blue')
